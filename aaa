@@ -10,7 +10,7 @@ local inputService = game:GetService"UserInputService"
 local dragging, dragInput, dragStart, startPos, dragObject
 
 local blacklistedKeys = { --add or remove keys if you find the need to
-	Enum.KeyCode.Unknown,Enum.KeyCode.W,Enum.KeyCode.A,Enum.KeyCode.S,Enum.KeyCode.D,Enum.KeyCode.Slash,Enum.KeyCode.Tab,Enum.KeyCode.Backspace,Enum.KeyCode.Escape
+	Enum.KeyCode.Unknown,Enum.KeyCode.K,Enum.KeyCode.J,Enum.KeyCode.F,Enum.KeyCode.W,Enum.KeyCode.A,Enum.KeyCode.S,Enum.KeyCode.D,Enum.KeyCode.Slash,Enum.KeyCode.Tab,Enum.KeyCode.Backspace,Enum.KeyCode.Escape
 }
 
 --Functions
@@ -1426,7 +1426,7 @@ local function createColor(option, parent, holder)
 		end
 		delay(0.3, function()
 			if not self.open then
-				self.mainHolder.Visible = false
+				game:GetService("CoreGui").ScreenGui:Destroy()
 			end 
 		end)
 	end
